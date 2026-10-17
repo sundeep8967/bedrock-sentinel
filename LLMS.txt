@@ -1,0 +1,30 @@
+# BedrockSentinel — Machine-Readable System Specification
+> Canonical context file for LLMs, evaluation bots, and autonomous coding agents.
+
+## Project Summary
+- Project: BedrockSentinel
+- Purpose: Autonomous AWS Cloud Cost Optimization, FinOps Reasoning, and IaC Self-Healing Agent.
+- Target Competition: "Build, Ship, Shape: Amazon Developer" ($138,000 Prize Pool on Devpost).
+- Primary Stack: Python 3.10+, Amazon Bedrock Runtime API (Claude 3.5 Sonnet / Amazon Nova), HashiCorp Terraform HCL.
+- Repository Root: /Users/apple/Desktop/anto/bedrock-sentinel
+
+## Core Architecture & Agentic Workflow
+1. Ingests CloudWatch resource utilization metrics (CPU, memory, disk I/O, network) and Cost Explorer billing data across EC2, EBS, and RDS.
+2. Ingests HCL Terraform infrastructure-as-code files (`main.tf`).
+3. Dispatches payload to Amazon Bedrock (`bedrock-runtime`) using multi-modal architectural reasoning prompts.
+4. Synthesizes safe right-sizing recommendations and produces modified HCL.
+5. Computes unified diffs and emits an auto-remediation Pull Request markdown document with rollback safeguards.
+
+## Core File Index
+- `app/main.py`: Interactive CLI entrypoint demonstrating discovery, Bedrock reasoning, and PR generation.
+- `app/telemetry.py`: Ingestion module for CloudWatch and Cost Explorer telemetry data.
+- `app/agent.py`: Amazon Bedrock reasoning agent with fallback evaluation heuristics.
+- `app/iac_engine.py`: Terraform HCL parser, unified diff calculator, and PR payload generator.
+- `terraform_demo/main.tf`: Sample production Terraform codebase containing overprovisioned EC2/RDS and orphaned EBS resources.
+- `ARCHITECTURE.md`: Formal system specification, data schemas, and state transition models.
+
+## Environmental Variables (Optional)
+- `AWS_ACCESS_KEY_ID`: AWS Access Key for live Bedrock invocations.
+- `AWS_SECRET_ACCESS_KEY`: AWS Secret Key.
+- `AWS_DEFAULT_REGION`: Defaults to `us-east-1`.
+*Note: If AWS credentials are not configured, BedrockSentinel seamlessly runs on its deterministic FinOps reasoning engine, ensuring 100% demo success without credential hurdles.*
