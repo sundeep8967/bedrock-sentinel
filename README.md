@@ -42,19 +42,29 @@ flowchart TD
 
 ### 1. Requirements
 - Python 3.10+
+- `pip install -r requirements.txt`
 
-### 2. Run BedrockSentinel CLI
+### 2. Option A: Interactive Visual Web Dashboard (Recommended for Judges)
+```bash
+cd bedrock-sentinel
+python3 app/server.py
+```
+Open **`http://localhost:5050`** in your browser to experience the live interactive dashboard:
+* Real-time CloudWatch resource cards with utilization badges.
+* 1-Click Bedrock Reasoning Agent invocation.
+* Dynamic FinOps ROI breakdown (Monthly & Annualized savings).
+* Live syntax-highlighted unified Terraform diff viewer.
+
+### 3. Option B: CLI Pipeline
 ```bash
 cd bedrock-sentinel
 python3 app/main.py
 ```
-
-### 3. Output
-The tool will output:
+The terminal output presents:
 * Real-time telemetry scan across EC2, EBS, and RDS resources.
 * Bedrock architectural reasoning and anomaly detection summary.
 * Financial ROI analysis (Monthly & Annualized savings).
-* Complete, verified Git unified diff ready for 1-click merging into your repository.
+* Complete, verified Git unified diff ready for automated PR dispatch.
 
 ---
 
