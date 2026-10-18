@@ -5,6 +5,9 @@
 - Project: BedrockSentinel
 - Purpose: Autonomous AWS Cloud Cost Optimization, FinOps Reasoning, and IaC Self-Healing Agent.
 - Target Competition: "Build, Ship, Shape: Amazon Developer" ($138,000 Prize Pool on Devpost).
+- Hackathon Submission Link: https://amazondeveloper.devpost.com/
+- Submission Platform: Devpost
+- Submission Deadline: October 23, 2026
 - Primary Stack: Python 3.10+, Amazon Bedrock Runtime API (Claude 3.5 Sonnet / Amazon Nova), HashiCorp Terraform HCL.
 - Repository Root: /Users/apple/Desktop/anto/bedrock-sentinel
 
