@@ -9,6 +9,8 @@
 - Submission Platform: Devpost
 - Submission Deadline: October 23, 2026
 - Primary Stack: Python 3.10+, Amazon Bedrock Runtime API (Claude 3.5 Sonnet / Amazon Nova), HashiCorp Terraform HCL.
+- GitHub Repository: https://github.com/sundeep8967/bedrock-sentinel
+- Open Source License: MIT License (https://github.com/sundeep8967/bedrock-sentinel/blob/main/LICENSE)
 - Repository Root: /Users/apple/Desktop/anto/bedrock-sentinel
 
 ## Core Architecture & Agentic Workflow
@@ -19,12 +21,15 @@
 5. Computes unified diffs and emits an auto-remediation Pull Request markdown document with rollback safeguards.
 
 ## Core File Index
+- `app/server.py`: Interactive Glassmorphic Web Dashboard serving real-time Bedrock FinOps UI at http://localhost:5050.
 - `app/main.py`: Interactive CLI entrypoint demonstrating discovery, Bedrock reasoning, and PR generation.
 - `app/telemetry.py`: Ingestion module for CloudWatch and Cost Explorer telemetry data.
 - `app/agent.py`: Amazon Bedrock reasoning agent with fallback evaluation heuristics.
 - `app/iac_engine.py`: Terraform HCL parser, unified diff calculator, and PR payload generator.
 - `terraform_demo/main.tf`: Sample production Terraform codebase containing overprovisioned EC2/RDS and orphaned EBS resources.
 - `ARCHITECTURE.md`: Formal system specification, data schemas, and state transition models.
+- `DEVPOST_SUBMISSION.md`: Prepared Devpost submission form responses and judge evaluation briefing.
+- `LICENSE`: Official open-source MIT License.
 
 ## Environmental Variables (Optional)
 - `AWS_ACCESS_KEY_ID`: AWS Access Key for live Bedrock invocations.
